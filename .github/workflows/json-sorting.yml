@@ -12,7 +12,7 @@ jobs:
     name: JSON Sorting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
       - name: JSON Sorting
         run: |
           jq --tab -s 'sort_by(.name)' chaos-bugbounty-list.json > chaos-bugbounty-list.json.tmp && mv chaos-bugbounty-list.json.tmp chaos-bugbounty-list.json
